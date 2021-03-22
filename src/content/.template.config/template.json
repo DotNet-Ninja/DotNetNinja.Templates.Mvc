@@ -1,0 +1,14 @@
+{    
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Larry House",
+    "classifications": [ "Web" ],
+    "name": "DotNetNinja MVC Template",
+    "identity": "DotNetNinja.Templates.Mvc",        
+    "shortName": "ninjamvc",                 
+    "tags": {
+        "language": "C#",    
+        "type": "project"                 
+    },
+    "sourceName": "DotNetNinja.Templates.Mvc",
+    "preferNameDirectory" : true
+}

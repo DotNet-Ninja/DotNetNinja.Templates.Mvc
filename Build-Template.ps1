@@ -1,0 +1,1 @@
+nuget pack .\src\DotNetNinja.Templates.Mvc.nuspec -OutputDirectory C:\Packages\NuGet
