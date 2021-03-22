@@ -4,16 +4,16 @@ using Microsoft.Extensions.Logging;
 
 namespace DotNetNinja.Templates.Mvc.Controllers
 {
-    public class HomeController : Controller
+    public class ErrorController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public ErrorController(ILogger<ErrorController> logger)
         {
             _logger = Guard.IsNotNull(logger, nameof(logger));
         }
 
-        [HttpGet]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Index()
         {
             return View();
