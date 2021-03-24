@@ -10,5 +10,57 @@
         "type": "project"                 
     },
     "sourceName": "DotNetNinja.Templates.Mvc",
-    "preferNameDirectory" : true
+    "preferNameDirectory" : true,
+    "symbols": {
+        "readme": {
+            "type": "parameter",
+            "datatype":"bool",
+            "defaultValue": "true"
+        },
+        "license": {
+            "type": "parameter",
+            "datatype":"bool",
+            "defaultValue": "true"
+        },
+        "gitignore": {
+            "type": "parameter",
+            "datatype":"bool",
+            "defaultValue": "true"
+        },
+        "editorconfig": {
+            "type": "parameter",
+            "datatype":"bool",
+            "defaultValue": "true"
+        }
+    },
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "condition": "(!readme)",
+                    "exclude": [
+                        "ReadMe.md"
+                    ]
+                },
+                {
+                    "condition": "(!license)",
+                    "exclude": [
+                        "License.txt"
+                    ]
+                },
+                {
+                    "condition": "(!gitignore)",
+                    "exclude": [
+                        ".GitIgnore"
+                    ]
+                },
+                {
+                    "condition": "(!editorconfig)",
+                    "exclude": [
+                        ".editorconfig"
+                    ]
+                }
+            ]
+        }
+    ]
 }
