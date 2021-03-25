@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@*#if(authentication)
+@{
+    var isAuthenticated = User.Identity.IsAuthenticated;
+    var userName = (isAuthenticated) ? User.Identity.Name : "Anonymous";
+}
+#endif*@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -22,6 +28,22 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                     </ul>
+@*#if(authentication)
+                    <ul class="navbar-nav ml-auto">
+                        @if (!isAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Account" asp-action="SignIn">Sign In</a>
+                            </li> 
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Account" asp-action="SignOut">Sign Out | @userName</a>
+                            </li>
+                        }
+                    </ul>
+#endif*@
                 </div>
             </div>
         </nav>
