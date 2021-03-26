@@ -2,9 +2,11 @@
     "$schema": "http://json.schemastore.org/template",
     "author": "Larry House",
     "classifications": [ "Web" ],
-    "name": "DotNetNinja MVC Template",
+    "name": "DotNetNinja MVC Application v1.0.0",
     "identity": "DotNetNinja.Templates.Mvc",        
-    "shortName": "ninjamvc",                 
+    "shortName": "ninjamvc",     
+    "defaultName": "DotNetNinjaMVC",   
+    "description": ".Net 5.0 MVC Web Application - Batteries Included",         
     "tags": {
         "language": "C#",    
         "type": "project"                 
@@ -12,61 +14,79 @@
     "sourceName": "DotNetNinja.Templates.Mvc",
     "preferNameDirectory" : true,
     "symbols": {
-        "readme": {
+        "Framework":{
             "type": "parameter",
-            "datatype":"bool",
-            "defaultValue": "true"
+            "description": "The target framework for the project.",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "net5.0",
+                    "description": ".Net 5.0"
+                }
+            ],
+            "replaces": "net5.0",
+            "defaultValue": "net5.0"
         },
-        "license": {
+        "ReadMe": {
             "type": "parameter",
             "datatype":"bool",
-            "defaultValue": "true"
+            "defaultValue": "true",
+            "description": "Include a Read Me file (ReadMe.md) in the solution."
         },
-        "gitignore": {
+        "License": {
             "type": "parameter",
             "datatype":"bool",
-            "defaultValue": "true"
+            "defaultValue": "true",
+            "description": "Include an MIT License file (License.txt) in the solution."
         },
-        "editorconfig": {
+        "GitIgnore": {
             "type": "parameter",
             "datatype":"bool",
-            "defaultValue": "true"
+            "defaultValue": "true",
+            "description": "Include a Git Ignore file (.gitignore) in the solution."
         },
-        "authentication": {
+        "EditorConfig": {
             "type": "parameter",
             "datatype":"bool",
-            "defaultValue": "false"            
+            "defaultValue": "true",
+            "description": "Include an Editor Config file (.editorconfig) in the solution."
+        },
+        "Authentication": {
+            "type": "parameter",
+            "datatype":"bool",
+            "defaultValue": "false"       ,
+            "description": "Include code integrating Auth0 authentication in the solution."     
         }
     },
     "sources": [
         {
             "modifiers": [
                 {
-                    "condition": "(!readme)",
+                    "condition": "(!ReadMe)",
                     "exclude": [
                         "ReadMe.md"
                     ]
                 },
                 {
-                    "condition": "(!license)",
+                    "condition": "(!License)",
                     "exclude": [
                         "License.txt"
                     ]
                 },
                 {
-                    "condition": "(!gitignore)",
+                    "condition": "(!GitIgnore)",
                     "exclude": [
                         ".GitIgnore"
                     ]
                 },
                 {
-                    "condition": "(!editorconfig)",
+                    "condition": "(!EditorConfig)",
                     "exclude": [
                         ".editorconfig"
                     ]
                 },
                 {
-                    "condition": "(!authentication)",
+                    "condition": "(!Authentication)",
                     "exclude": [
                         "src/DotNetNinja.Templates.Mvc/Configuration/AuthenticationSettings.cs",
                         "src/DotNetNinja.Templates.Mvc/Configuration/CustomAuthenticationExtensions.cs",

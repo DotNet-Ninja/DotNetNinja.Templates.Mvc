@@ -13,7 +13,7 @@
   <ItemGroup>
     <PackageReference Include="ChaosMonkey.Guards.NetStandard" Version="1.0.23" />
     <PackageReference Include="DotNetNinja.AutoBoundConfiguration" Version="1.1.0" />
-<!--#if(authentication)-->
+<!--#if(Authentication)-->
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.2" />
 <!--#endif-->

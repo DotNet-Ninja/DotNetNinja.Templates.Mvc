@@ -9,6 +9,10 @@ if($null -ne $template){
     Write-Host "Removing $id"
     dotnet new -u $id
 }
+# Clear Template Cache
+Write-Host "Clearing Template Cache"
+Remove-Item ~/.templateengine -Recurse -Force
+
 #Build new Package
 Write-Host "Building Template Package $id"
 .\Build-Template.ps1

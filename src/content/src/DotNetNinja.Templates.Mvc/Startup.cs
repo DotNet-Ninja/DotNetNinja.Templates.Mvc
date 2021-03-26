@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using DotNetNinja.AutoBoundConfiguration;
-#if(authentication)
+#if(Authentication)
 using DotNetNinja.Templates.Mvc.Configuration;
 #endif
 using Microsoft.AspNetCore.Builder;
@@ -24,12 +24,12 @@ namespace DotNetNinja.Templates.Mvc
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-#if(authentication)
+#if(Authentication)
             var oidc = services.AddAutoBoundConfigurations(Configuration)
                 .FromAssembly(typeof(Program).Assembly).Provider.Get<AuthenticationSettings>();
             services.AddCustomAuthentication(oidc);
 #endif
-#if(!authentication)
+#if(!Authentication)
             services.AddAutoBoundConfigurations(Configuration).FromAssembly(typeof(Program).Assembly);
 #endif
             services.AddControllersWithViews();
@@ -53,7 +53,7 @@ namespace DotNetNinja.Templates.Mvc
 
             app.UseRouting();
 
-#if(authentication)
+#if(Authentication)
             app.UseAuthentication();
 #endif            
             app.UseAuthorization();

@@ -1,0 +1,40 @@
+{
+    "$schema":"http://json.schemastore.org/vs-2017.3.host",
+    "symbolInfo": [
+        {
+            "id": "ReadMe",
+            "name": {
+                "text": "Include a Read Me file (ReadMe.md) in the solution."
+            },
+            "isVisible": "true"
+        },        
+        {
+            "id": "License",
+            "name": {
+                "text": "Include an MIT License file (License.txt) in the solution."
+            },
+            "isVisible": "true"
+        },
+        {
+            "id": "GitIgnore",
+            "name": {
+                "text": "Include a Git Ignore file (.gitignore) in the solution."
+            },
+            "isVisible": "true"
+        },
+        {
+            "id": "EditorConfig",
+            "name": {
+                "text": "Include an Editor Config file (.editorconfig) in the solution."
+            },
+            "isVisible": "true"
+        },
+        {
+            "id": "Authentication",
+            "name": {
+                "text": "Include code integrating Auth0 authentication in the solution."
+            },
+            "isVisible": "true"
+        }
+    ]
+}
