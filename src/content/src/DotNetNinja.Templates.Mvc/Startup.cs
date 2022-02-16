@@ -1,4 +1,5 @@
-﻿using DotNetNinja.Templates.Mvc.Services;
+﻿using DotNetNinja.Templates.Mvc.Configuration;
+using DotNetNinja.Templates.Mvc.Services;
 
 namespace DotNetNinja.Templates.Mvc;
 
@@ -14,34 +15,19 @@ public class Startup
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddScoped<ITimeProvider, DefaultTimeProvider>();
-
-        // Add services to the container.
-        services.AddControllersWithViews();
+        services.AddApplicationServices()
+                .AddControllersWithViews();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
-        if (!env.IsDevelopment())
-        {
-            app.UseExceptionHandler("/Home/Error");
-            // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-            app.UseHsts();
-        }
-
-        app.UseHttpsRedirection();
-        app.UseStaticFiles();
-
-        app.UseRouting();
-
-        app.UseAuthorization();
-
-        app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapControllerRoute(
-                name: "Default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
-        });
+        app.UseStrictTransportSecurity(env)
+            .UseErrorHandler(env)
+            .UseHttpsRedirection()
+            .UseStaticFiles()
+            .UseRouting()
+            .UseAuthorization()
+            .UseApplicationEndpoints();
     }
 }
