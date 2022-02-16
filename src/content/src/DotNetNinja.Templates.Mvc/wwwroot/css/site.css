@@ -1,6 +1,18 @@
-﻿@import url('/lib/bootstrap-icons/font/bootstrap-icons.min.css');
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
 
 body {
-    margin-top: 70px;
-    margin-bottom: 70px;
+  margin-bottom: 60px;
 }
