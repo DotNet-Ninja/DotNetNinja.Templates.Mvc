@@ -2,13 +2,10 @@
 
 namespace DotNetNinja.Templates.Mvc.Controllers;
 
-public class HomeController : Controller
+public class HomeController : MvcController
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger):base(logger)
     {
-        _logger = logger;
     }
 
     public IActionResult Index()
