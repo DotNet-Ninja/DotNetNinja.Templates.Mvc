@@ -10,4 +10,9 @@
     <PackageReference Include="DotNetNinja.AutoBoundConfiguration" Version="1.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Constants\" />
+    <Folder Include="wwwroot\lib\" />
+  </ItemGroup>
+
 </Project>
