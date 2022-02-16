@@ -7,11 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Models\.gitkeep" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="DotNetNinja.AutoBoundConfiguration" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Constants\" />
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="TagHelpers\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 

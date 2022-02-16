@@ -1,4 +1,8 @@
+using DotNetNinja.Templates.Mvc.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<ITimeProvider, DefaultTimeProvider>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

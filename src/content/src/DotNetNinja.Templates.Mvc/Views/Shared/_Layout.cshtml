@@ -10,25 +10,7 @@
     <body>
         
         <header>
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
-                <div class="container">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DotNetNinja.Templates.Mvc</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <partial name="_NavBar"/>
         </header>
 
         <div class="container">
@@ -37,9 +19,9 @@
             </main>
         </div>
 
-        <footer class="border-top footer text-muted">
+        <footer class="footer text-muted pt-2 mt-3">
             <div class="container">
-                &copy; 2022 - DotNetNinja.Templates.Mvc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                <copyright start-year="2021" message="DotNetNinja.Templates.Mvc - All rights reserved."/>
             </div>
         </footer>
 
