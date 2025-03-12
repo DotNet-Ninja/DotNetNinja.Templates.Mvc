@@ -2,11 +2,11 @@
     "$schema": "http://json.schemastore.org/template",
     "author": "Larry House",
     "classifications": [ "Web" ],
-    "name": "DotNetNinja MVC Application v1.0.0",
+    "name": "DotNetNinja MVC Application v2.0.0",
     "identity": "DotNetNinja.Templates.Mvc",        
     "shortName": "ninjamvc",     
     "defaultName": "DotNetNinjaMVC",   
-    "description": ".Net 5.0 MVC Web Application - Batteries Included",         
+    "description": ".Net 9.0 MVC Web Application - Batteries Included",         
     "tags": {
         "language": "C#",    
         "type": "project"                 
@@ -20,36 +20,12 @@
             "datatype": "choice",
             "choices": [
                 {
-                    "choice": "net5.0",
-                    "description": ".Net 5.0"
+                    "choice": "net9.0",
+                    "description": ".Net 9.0"
                 }
             ],
-            "replaces": "net5.0",
-            "defaultValue": "net5.0"
-        },
-        "ReadMe": {
-            "type": "parameter",
-            "datatype":"bool",
-            "defaultValue": "true",
-            "description": "Include a Read Me file (ReadMe.md) in the solution."
-        },
-        "License": {
-            "type": "parameter",
-            "datatype":"bool",
-            "defaultValue": "true",
-            "description": "Include an MIT License file (License.txt) in the solution."
-        },
-        "GitIgnore": {
-            "type": "parameter",
-            "datatype":"bool",
-            "defaultValue": "true",
-            "description": "Include a Git Ignore file (.gitignore) in the solution."
-        },
-        "EditorConfig": {
-            "type": "parameter",
-            "datatype":"bool",
-            "defaultValue": "true",
-            "description": "Include an Editor Config file (.editorconfig) in the solution."
+            "replaces": "net9.0",
+            "defaultValue": "net9.0"
         },
         "Authentication": {
             "type": "parameter",
@@ -61,30 +37,6 @@
     "sources": [
         {
             "modifiers": [
-                {
-                    "condition": "(!ReadMe)",
-                    "exclude": [
-                        "ReadMe.md"
-                    ]
-                },
-                {
-                    "condition": "(!License)",
-                    "exclude": [
-                        "License.txt"
-                    ]
-                },
-                {
-                    "condition": "(!GitIgnore)",
-                    "exclude": [
-                        ".GitIgnore"
-                    ]
-                },
-                {
-                    "condition": "(!EditorConfig)",
-                    "exclude": [
-                        ".editorconfig"
-                    ]
-                },
                 {
                     "condition": "(!Authentication)",
                     "exclude": [

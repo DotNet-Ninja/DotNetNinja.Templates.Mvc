@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>8e3e418b-06dc-463f-bd7b-9f80103e83a7</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AspNetCore.HealthChecks.UI" Version="9.0.0" />
+		<PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="9.0.0" />
+		<PackageReference Include="Auth0.AspNetCore.Authentication" Version="1.4.1" />
+		<PackageReference Include="DotNetNinja.AutoBoundConfiguration" Version="1.2.0" />
+	</ItemGroup>
+
+</Project>

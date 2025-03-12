@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>DotNetNinja.Templates.Mvc</id>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
     <description>
       Template for creating an ASP.NET Core MVC Solution
     </description>

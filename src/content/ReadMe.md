@@ -1,2 +1,0 @@
-# DotNetNinja.Templates.Mvc
-
