@@ -4,7 +4,7 @@
     <id>DotNetNinja.Templates.Mvc</id>
     <version>2.0.0</version>
     <description>
-      Template for creating an ASP.NET Core MVC Solution
+      Template for creating an ASP.NET Core MVC Project
     </description>
     <authors>Larry House</authors>
     <license type="expression">MIT</license>
