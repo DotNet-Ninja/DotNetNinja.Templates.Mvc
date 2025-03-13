@@ -7,7 +7,7 @@ $template = $templates | Select-String $shortName
 # If installed then uninstall it
 if($null -ne $template){
     Write-Host "Removing $id"
-    dotnet new -u $id
+    dotnet new uninstall $id
 }
 # Clear Template Cache
 Write-Host "Clearing Template Cache"
@@ -19,4 +19,4 @@ Write-Host "Building Template Package $id"
 
 # Install Template
 Write-Host "Installing new Template $id"
-dotnet new -i $id
+dotnet new install $id
